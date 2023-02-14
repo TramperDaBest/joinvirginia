@@ -1,3 +1,4 @@
+var currentClick = 'no'
 var stop11 = false
 var tut = false
 var WinCondition124 = prompt("Choose the difficulty. 1 for easy, 2 for medium, 3 for hard, and 4 for apocalypse. Type 'Credits' for the credits.")
@@ -180,6 +181,10 @@ function playerControls() {
     }
     
     } 
+  if (keyIsDown(32)) {
+    clickSpace()
+    
+    } 
 }
 
 function destroyOther (destroyed, projectile) {
@@ -200,7 +205,19 @@ function gameOver() {
   window.location.reload();
 }
 document.onmousedown = click
-
+document.addEventListener('keyup', (event) => {
+ const keyName = event.key;
+ if(keyName==' '){
+   currentClick = 'no'
+ }
+});
+function clickSpace(){
+  if(currentClick == 'no'){
+    click()
+    currentClick = 'yes'
+  }
+}
+  
 function click() {
  if(mouseX - player.position.x > 0){
   var projectile = createSprite(player.position.x, player.position.y);
