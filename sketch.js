@@ -4,7 +4,6 @@ var tut = false
 var WinCondition124 = prompt("Choose the difficulty. 1 for easy, 2 for medium, 3 for hard, and 4 for apocalypse. Type 'Credits' for the credits.")
 if(WinCondition124 == "credits" || WinCondition124 == "Credits"){
       alert("Code by Connor W")
-    alert("American flag: “American Flag.” Pixelartmaker.com, 2016, pixelartmaker-data-78746291193.nyc3.digitaloceanspaces.com/image/08054dd88bee517.png. Accessed 4 June 2022.")
     alert("Crown: “Crown.” Pixelartmaker.com, 2018, pixelartmaker-data-78746291193.nyc3.digitaloceanspaces.com/image/206a2dad1a22f34.png. Accessed 4 June 2022.")
     alert("Bullet designed by Asher W.")
   var stop11 = true
