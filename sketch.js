@@ -5,7 +5,6 @@ var WinCondition124 = prompt("Choose the difficulty. 1 for easy, 2 for medium, 3
 if(WinCondition124 == "credits" || WinCondition124 == "Credits"){
       alert("Code by Connor W")
     alert("American flag: “American Flag.” Pixelartmaker.com, 2016, pixelartmaker-data-78746291193.nyc3.digitaloceanspaces.com/image/08054dd88bee517.png. Accessed 4 June 2022.")
-    alert("George Washington: “George Washington.” Tumblr Pixelblock, 2011, 64.media.tumblr.com/cdef2467876a5916a98807778cc97813/tumblr_mifdatxjy91r413h3o1_400.jpg. Accessed 4 June 2022.")
     alert("Crown: “Crown.” Pixelartmaker.com, 2018, pixelartmaker-data-78746291193.nyc3.digitaloceanspaces.com/image/206a2dad1a22f34.png. Accessed 4 June 2022.")
     alert("Bullet designed by Asher W.")
   var stop11 = true
@@ -148,7 +147,7 @@ function setup() {
     var py = canvasHeight/2 + 10000 * ang;
     createEnemy(px,py);
   }
-  document.getElementById("greeting").innerHTML ="George Washington's health is "+ georgehealth+". He has taken "+(WinCondition124*3-georgehealth)+" damage so far.";
+  document.getElementById("greeting").innerHTML ="The boss's health is "+ georgehealth+". He has taken "+(WinCondition124*3-georgehealth)+" damage so far.";
 }
 
 function playerControls() {
@@ -249,10 +248,10 @@ if (tut == false){
 }
 function loseHealth(){
   georgehealth = georgehealth -1
-  document.getElementById("greeting").innerHTML ="George Washington's health is "+georgehealth+". He has taken "+(WinCondition124*3-georgehealth)+" damage so far.";
+  document.getElementById("greeting").innerHTML ="The boss's health is "+georgehealth+". He has taken "+(WinCondition124*3-georgehealth)+" damage so far.";
 if(georgehealth < 1){
     ghost.setCollider("rectangle", 0, 9999, 75, 75);
-  document.getElementById("greeting").innerHTML ="Congratulations! You have defeated George Washington!";
+  document.getElementById("greeting").innerHTML ="Congratulations! You have defeated the boss!";
   ghost.remove()
   score = score+1
       gdie();
