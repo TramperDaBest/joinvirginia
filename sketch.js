@@ -19,7 +19,7 @@ if (stop11 == true){
 }
 else{
 var canvasWidth = screen.width;
-var canvasHeight = 480;
+var canvasHeight = screen.height;
 var WCH = WinCondition124 - 2
 var player = 0;
 var playerX = 300;
