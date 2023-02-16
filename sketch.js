@@ -88,7 +88,7 @@ else if(ticon == null){
       fortticonder();
 }
 }
-if(WinCondition124 == 744){
+if(WinCondition124/6 == 744){
   WinCondition124 = 7
   WCH = 5
   georgehealth = 7*3
