@@ -173,7 +173,7 @@ if (WinCondition124 == 24){
 }
 
 //Ultra Nightmare
-if (WinCondition124 = 30){
+if (WinCondition124 == 30){
   GhostMaxSpeed = 3.9
   NERFAMOUNT = 1
   EnemyNumOnBoss = 15
