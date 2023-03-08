@@ -207,7 +207,7 @@ function setup() {
   player.setCollider("rectangle", 0, 0, 64, 45);
   ghost.setCollider("rectangle", 0, 0, 96, 69);
   for (var i = 0; i < WCH-NERFAMOUNT; i++) {
-    var ang = random(360);
+    var ang = random(330);
     var px = canvasWidth/2 + 10000 * ang;
     var py = canvasHeight/2 + 10000 * ang;
     createEnemy(px,py);
