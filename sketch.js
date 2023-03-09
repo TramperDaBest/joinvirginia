@@ -54,6 +54,17 @@ if (stop11 == true){
  
 }
 else{
+
+  function taxPointCreator(){
+  var TaxPoint = random(345)
+  if(TaxPoint<16){
+    taxPointCreator()
+  }
+  else{
+    return TaxPoint
+  }
+  }
+
 var canvasWidth = screen.width;
 var canvasHeight = screen.height/1.08;
 var WCH = WinCondition124 - 2
@@ -207,7 +218,7 @@ function setup() {
   player.setCollider("rectangle", 0, 0, 64, 45);
   ghost.setCollider("rectangle", 0, 0, 96, 69);
   for (var i = 0; i < WCH-NERFAMOUNT; i++) {
-    var ang = random(330);
+    var ang = random(360);
     var px = canvasWidth/2 + 10000 * ang;
     var py = canvasHeight/2 + 10000 * ang;
     createEnemy(px,py);
@@ -363,7 +374,7 @@ function createEnemy(x,y) {
   var newEnemy = createSprite(x,y);
   var attackImg = loadImage("images/enemy.png");
   newEnemy.addImage(attackImg);
-  newEnemy.setSpeed(2.5, random(360));
+  newEnemy.setSpeed(2.5, taxPointCreator());
   newEnemy.setCollider("rectangle", 0, 0, 60, 36);
   enemy.add(newEnemy);
   enemyAmount++;
@@ -414,7 +425,9 @@ function wowhelper(){
 }
 
 function draw() {
-       if (score == enemyAmount) {
+  if(georgehealth>0){
+  document.getElementById("greeting").innerHTML ="England's health is "+georgehealth+". England has taken "+(WinCondition124*3-georgehealth)+" damage so far, and you still have "+(enemyAmount-(score+1))+" taxes left to defeat.";}
+  if (score == enemyAmount) {
          if(WinCondition124/6 == 1){
            secondInCommand();
          }
