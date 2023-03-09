@@ -13,8 +13,6 @@ if(prompt("Press 1 to get tutorial, or enter to play")==1){
   alert("Go, Virginia!")
 }
 
-
-
 //How many less enemies to spawn naturally
 var NERFAMOUNT = 0
 
@@ -34,7 +32,7 @@ var money = 10000
 var upToAmount = 3000
 
 document.getElementById("money").innerHTML = "$"+money
-var enemyAmount = 1
+var enemyAmount = 0
 var varlock9 = 0
 var varlock10 = 0
 var currentClick = 'no'
@@ -88,51 +86,55 @@ var direction = 90;
 var GhostMaxSpeed = 3;
 var score = 0;
 function howeBorn1(){
-   var howeBorn = prompt("Question 1")
-  if(howeBorn == "1"){
+   var howeBorn = prompt("What was the Mini Ice Age?")
+  if(howeBorn == "1607"||howeBorn=="1607."){
   }  
 else if(howeBorn == null){
   window.stop();
 }
   else{
-      alert("Sorry, wrong answer! Make sure you type only the number, nothing else")
-      howeBorn1();
+    alert("Sorry, wrong answer! Make sure to type just the year.")
+    document.getElementById("money").innerHTML = "$"+money
+    howeBorn1();
     }
 }
 function secondInCommand(){
-   var SIC = prompt("Question 2")
-  if(SIC == "2"){
+   var SIC = prompt("Who founded Virginia?")
+  if(SIC == "John Smith"||SIC=="John Smith."){
   }
 else if(SIC == null){
   window.stop();
 }
   else{
-      alert("Sorry, wrong answer! Make sure you type only the name and use capitals.")
-      secondInCommand();
+    alert("Sorry, wrong answer! Make sure to only type the name.")
+    document.getElementById("money").innerHTML = "$"+money
+    secondInCommand();
     }
 }
 function truefalseturn(){
-     var TFT = prompt("Question 3")
-  if(TFT == "3"){
+     var TFT = prompt("What was Virginia's main crop?")
+  if(TFT == "tobacco" || TFT == "tobacco." || TFT == "Tobacco" || TFT == "Tobacco."){
   }
 else if(TFT == null){
   window.stop();
 }
   else{
-      alert("Sorry, wrong answer! Make sure you type only yes or no.")
+      alert("Sorry, wrong answer! Make sure to only type the name of the crop.")
+      document.getElementById("money").innerHTML = "$"+money
       truefalseturn();
 }
 }
 function fortticonder(){
-     var ticon = prompt("Question 4")
-  if(ticon == "4"){
+     var ticon = prompt("What year did Virginia convert to free religion?")
+  if(ticon == "1786"||ticon=="1786."){
   }
 else if(ticon == null){
   window.stop();
 }
   else{
-      alert("Sorry, wrong answer! Make sure you type Fort _____ with capitals and the word 'Fort'. Also check your spelling!")
-      fortticonder();
+    alert("Sorry, wrong answer! Make sure to type just the year.")
+    document.getElementById("money").innerHTML = "$"+money
+    fortticonder();
 }
 }
 if(WinCondition124/6 == 744){
@@ -191,7 +193,7 @@ if (WinCondition124 == 30){
   money = 5000
   timeToStop = 3000
   upToAmount = 10000
-
+  howeBorn1()
 }
 document.getElementById("money").innerHTML = "$"+money
 if(WinCondition124 == 0){
@@ -223,7 +225,7 @@ function setup() {
     var py = canvasHeight/2 + 10000 * ang;
     createEnemy(px,py);
   }
-  document.getElementById("greeting").innerHTML ="England's health is "+georgehealth+". England has taken "+(WinCondition124*3-georgehealth)+" damage so far, and you still have "+(enemyAmount-(score+1))+" taxes left to defeat.";}
+  document.getElementById("greeting").innerHTML ="England's health is "+georgehealth+". England has taken "+(WinCondition124*3-georgehealth)+" damage so far, and you still have "+(enemyAmount-score)+" taxes left to defeat.";}
 
 function playerControls() {
   if (keyIsDown(RIGHT_ARROW) || keyIsDown(68)) {
@@ -284,7 +286,7 @@ function destroyOther3(destroyed, newCoin){
   coin.remove(newCoin)
   newCoin.remove()
   georgehealth = WinCondition124*3
-  document.getElementById("greeting").innerHTML ="England's health is "+georgehealth+". England has taken "+(WinCondition124*3-georgehealth)+" damage so far, and you still have "+(enemyAmount-(score+1))+" taxes left to defeat.";}
+  document.getElementById("greeting").innerHTML ="England's health is "+georgehealth+". England has taken "+(WinCondition124*3-georgehealth)+" damage so far, and you still have "+(enemyAmount-score)+" taxes left to defeat.";}
 
 function gameOver() {
   alert("GAME OVER");
@@ -324,32 +326,31 @@ function click() {
 }
 function gdie(){
 if (tut == false){
-  var gdie1 = prompt("Question_On_Death_Of_Boss5")
-  if(gdie1 == "5"){
+  var gdie1 = prompt("How many pounds of tobacco were worth 1 pound of silver?")
+  if(gdie1 == "4" || gdie1=="4." || gdie1=="4 pounds"||gdie=="4 pounds."){
     
   }
     else{
-      alert("Sorry, wrong answer! Make sure you type only the name and use capitals. Also check your spelling.")
+      alert("Sorry, wrong answer!")
+      document.getElementById("money").innerHTML = "$"+money
       gdie();
 }
 }
 }
 function loseHealth(){
   georgehealth = georgehealth -1
-  document.getElementById("greeting").innerHTML ="England's health is "+georgehealth+". England has taken "+(WinCondition124*3-georgehealth)+" damage so far, and you still have "+(enemyAmount-(score+1))+" taxes left to defeat.";
+  document.getElementById("greeting").innerHTML ="England's health is "+georgehealth+". England has taken "+(WinCondition124*3-georgehealth)+" damage so far, and you still have "+(enemyAmount-score)+" taxes left to defeat.";
   if(georgehealth < 1){
   varlock9 = 1
   ghost.setCollider("rectangle", 0, 9999, 75, 75);
-  document.getElementById("greeting").innerHTML ="Congratulations! You have defeated England!";
   ghost.remove()
-  score = score+1
       gdie();
 }
 }
 
 function getHealth(){
   georgehealth = WinCondition124*3
-  document.getElementById("greeting").innerHTML ="England's health is "+georgehealth+". England has taken "+(WinCondition124*3-georgehealth)+" damage so far, and you still have "+(enemyAmount-(score+1))+" taxes left to defeat.";
+  document.getElementById("greeting").innerHTML ="England's health is "+georgehealth+". England has taken "+(WinCondition124*3-georgehealth)+" damage so far, and you still have "+(enemyAmount-score)+" taxes left to defeat.";
 }
 
 function TaxTouch() {
@@ -396,8 +397,8 @@ function collisions() {
   ghost.overlap(projectiles, destroyOther1);
   ghost.overlap(coin, destroyOther3)
 
-  player.overlap(enemy, destroyOther2);
-  player.overlap(ghost, gameOver);
+ player.overlap(enemy, destroyOther2);
+ player.overlap(ghost, gameOver);
 
 
 }
@@ -407,7 +408,7 @@ function spawnEnemyOnBoss(){
     for (var i = 0; i < EnemyNumOnBoss; i++) {
       createEnemy(ghost.position.x,ghost.position.y)
     }
-    document.getElementById("greeting").innerHTML ="England's health is "+georgehealth+". England has taken "+(WinCondition124*3-georgehealth)+" damage so far, and you still have "+(enemyAmount-(score+1))+" taxes left to defeat.";
+    document.getElementById("greeting").innerHTML ="England's health is "+georgehealth+". England has taken "+(WinCondition124*3-georgehealth)+" damage so far, and you still have "+(enemyAmount-score)+" taxes left to defeat.";
     varlock10=0
   }
 }
@@ -426,12 +427,15 @@ function wowhelper(){
 
 function draw() {
   if(georgehealth>0){
-  document.getElementById("greeting").innerHTML ="England's health is "+georgehealth+". England has taken "+(WinCondition124*3-georgehealth)+" damage so far, and you still have "+(enemyAmount-(score+1))+" taxes left to defeat.";}
-  if (score == enemyAmount) {
+  document.getElementById("greeting").innerHTML ="England's health is "+georgehealth+". England has taken "+(WinCondition124*3-georgehealth)+" damage so far, and you still have "+(enemyAmount-score)+" taxes left to defeat.";}
+  else{
+    document.getElementById("greeting").innerHTML ="Congratulations! You have defeated England! You still have "+(enemyAmount-score)+" taxes left to defeat.";
+  }
+  if ((score) == enemyAmount) {
          if(WinCondition124/6 == 1){
            secondInCommand();
          }
-         if(WinCondition124/6 == 2){
+         if(WinCondition124/6 == 2 || WinCondition124/6 == 5){
            howeBorn1();
          }
          if(WinCondition124/6 == 3){
@@ -441,7 +445,7 @@ function draw() {
            truefalseturn();
          }
          
-         alert("You Win! You defeated "+(score-1)+" taxes and England! You still have $"+money);
+         alert("You Win! You defeated "+(score)+" taxes and England! You still have $"+money);
     score = 0; 
      window.location.reload();
    }  
