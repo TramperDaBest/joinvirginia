@@ -212,8 +212,7 @@ function setup() {
     var py = canvasHeight/2 + 10000 * ang;
     createEnemy(px,py);
   }
-  document.getElementById("greeting").innerHTML ="England's health is "+ georgehealth+". He has taken "+(WinCondition124*3-georgehealth)+" damage so far.";
-}
+  document.getElementById("greeting").innerHTML ="England's health is "+georgehealth+". England has taken "+(WinCondition124*3-georgehealth)+" damage so far, and you still have "+(enemyAmount-(score+1))+" taxes left to defeat.";}
 
 function playerControls() {
   if (keyIsDown(RIGHT_ARROW) || keyIsDown(68)) {
@@ -274,8 +273,7 @@ function destroyOther3(destroyed, newCoin){
   coin.remove(newCoin)
   newCoin.remove()
   georgehealth = WinCondition124*3
-  document.getElementById("greeting").innerHTML ="England's health is "+georgehealth+". He has taken "+(WinCondition124*3-georgehealth)+" damage so far.";
-}
+  document.getElementById("greeting").innerHTML ="England's health is "+georgehealth+". England has taken "+(WinCondition124*3-georgehealth)+" damage so far, and you still have "+(enemyAmount-(score+1))+" taxes left to defeat.";}
 
 function gameOver() {
   alert("GAME OVER");
@@ -327,8 +325,8 @@ if (tut == false){
 }
 function loseHealth(){
   georgehealth = georgehealth -1
-  document.getElementById("greeting").innerHTML ="England's health is "+georgehealth+". He has taken "+(WinCondition124*3-georgehealth)+" damage so far.";
-if(georgehealth < 1){
+  document.getElementById("greeting").innerHTML ="England's health is "+georgehealth+". England has taken "+(WinCondition124*3-georgehealth)+" damage so far, and you still have "+(enemyAmount-(score+1))+" taxes left to defeat.";
+  if(georgehealth < 1){
   varlock9 = 1
   ghost.setCollider("rectangle", 0, 9999, 75, 75);
   document.getElementById("greeting").innerHTML ="Congratulations! You have defeated England!";
@@ -340,7 +338,7 @@ if(georgehealth < 1){
 
 function getHealth(){
   georgehealth = WinCondition124*3
-  document.getElementById("greeting").innerHTML ="England's health is "+georgehealth+". He has taken "+(WinCondition124*3-georgehealth)+" damage so far.";
+  document.getElementById("greeting").innerHTML ="England's health is "+georgehealth+". England has taken "+(WinCondition124*3-georgehealth)+" damage so far, and you still have "+(enemyAmount-(score+1))+" taxes left to defeat.";
 }
 
 function TaxTouch() {
@@ -398,6 +396,7 @@ function spawnEnemyOnBoss(){
     for (var i = 0; i < EnemyNumOnBoss; i++) {
       createEnemy(ghost.position.x,ghost.position.y)
     }
+    document.getElementById("greeting").innerHTML ="England's health is "+georgehealth+". England has taken "+(WinCondition124*3-georgehealth)+" damage so far, and you still have "+(enemyAmount-(score+1))+" taxes left to defeat.";
     varlock10=0
   }
 }
