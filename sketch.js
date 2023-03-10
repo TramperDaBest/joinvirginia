@@ -86,13 +86,13 @@ var GhostMaxSpeed = 3;
 var score = 0;
 function howeBorn1(){
    var howeBorn = prompt("What was Virginia's most common job?")
-  if(howeBorn == "Agricultural Laborers"||howeBorn=="Agrlcultural Labrorers."||howeBorn=="agricultural laborers"||howeBorn=="agricultural laborers."){
+  if(howeBorn == "Agricultural Laborer"||howeBorn=="Agrlcultural Labrorer."||howeBorn=="agricultural laborer"||howeBorn=="agricultural laborer."){
   }  
 else if(howeBorn == null){
   window.stop();
 }
   else{
-    alert("Sorry, wrong answer! Make sure to type just the year.")
+    alert("Sorry, wrong answer! Make sure to type just the job.")
     document.getElementById("money").innerHTML = "$"+money
     howeBorn1();
     }
