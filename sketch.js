@@ -4,11 +4,10 @@ if(prompt("Press 1 to get tutorial, or enter to play")==1){
   alert("England sent out taxes left and right.")
   alert("However, you have a weapon: A cheeseburger.")
   alert("In the top left of your screen, you will see England's health, and on the right, your money.")
-  alert("If England touches you, you lose. If a tax touches you, England gets all it's health back and you lose some money.")
-  alert("When the tax touches you, some of your money is sent off to England in the form of a gold coin.")
-  alert("As soon as the coin leaves you, you will lose a random amount of money. When it touches England, Englands gets it health back.")
-  alert("You can also lose if you run out of money.")
-  alert("You can use WASD to move and space to shoot in the direction of your mouse.")
+  alert("If England touches you, you lose.")
+  alert("If a tax touches you, you lose a random amount of money and England get's all its health back.")
+  alert("You will lose if you run out of money.")
+  alert("You can use WASD to move and click to shoot")
   alert("Remember, you are Virginia, and you are the only hope.")
   alert("Go, Virginia!")
 }
@@ -86,7 +85,7 @@ var direction = 90;
 var GhostMaxSpeed = 3;
 var score = 0;
 function howeBorn1(){
-   var howeBorn = prompt("What was the Mini Ice Age?")
+   var howeBorn = prompt("What year was Virginia's mini ice age?")
   if(howeBorn == "1607"||howeBorn=="1607."){
   }  
 else if(howeBorn == null){
