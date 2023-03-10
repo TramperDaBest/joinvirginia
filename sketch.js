@@ -85,8 +85,8 @@ var direction = 90;
 var GhostMaxSpeed = 3;
 var score = 0;
 function howeBorn1(){
-   var howeBorn = prompt("What year was Virginia's mini ice age?")
-  if(howeBorn == "1607"||howeBorn=="1607."){
+   var howeBorn = prompt("What was Virginia's most common job?")
+  if(howeBorn == "Agricultural Laborers"||howeBorn=="Agrlcultural Labrorers."||howeBorn=="agricultural laborers"||howeBorn=="agricultural laborers."){
   }  
 else if(howeBorn == null){
   window.stop();
@@ -325,8 +325,8 @@ function click() {
 }
 function gdie(){
 if (tut == false){
-  var gdie1 = prompt("How many pounds of tobacco were worth 1 pound of silver?")
-  if(gdie1 == "4" || gdie1=="4." || gdie1=="4 pounds"||gdie=="4 pounds."){
+  var gdie1 = prompt("How many pounds of tobacco were worth 1 pound of silver at it's best?")
+  if(gdie1 == "100" || gdie1=="100." || gdie1=="100 pounds"||gdie=="100 pounds."){
     
   }
     else{
