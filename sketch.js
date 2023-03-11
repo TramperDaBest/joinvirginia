@@ -1,13 +1,13 @@
 if(prompt("Press 1 to get tutorial, or enter to play")==1){
   alert("The colonies had just been established. However, England was determined to profit off them.")
-  alert("The all of the other 12 colonies tried, but alas, they could not beat England.")
+  alert("All of the other 12 colonies tried, but alas, they could not beat England.")
   alert("England sent out taxes left and right.")
   alert("However, you have a weapon: A cheeseburger.")
   alert("In the top left of your screen, you will see England's health, and on the right, your money.")
   alert("If England touches you, you lose.")
-  alert("If a tax touches you, you lose a random amount of money and England get's all its health back.")
+  alert("If a tax touches you, you lose a random amount of money and England gets all its health back.")
   alert("You will lose if you run out of money.")
-  alert("You can use WASD to move and click to shoot")
+  alert("You can use WASD or arrow keys to move and click to shoot")
   alert("Remember, you are Virginia, and you are the only hope.")
   alert("Go, Virginia!")
 }
